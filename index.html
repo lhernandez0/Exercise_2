@@ -1,27 +1,73 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <!-- Head Contains Bootstrap CSS links -->
     <meta charset="utf-8">
-    <title>My Project</title> <!-- Change the Title as Necessary -->
-    <!-- Bootstrap CSS Begins Here, DO NOT TOUCH-->
+    <title>My Project</title>
+    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <!-- Bootstrap CSS Ends Here, DO NOT TOUCH -->
+    <!-- Bootstrap CSS End -->
+    <style>
+      .top-buffer { margin-top: 50px; }
+    </style>
   </head>
   <body>
-    <!-- Insert Body Code here. Add each component as necessary -->
-
-
-
-
-
-
-    <!-- End Body Code here, do not edit or add anything beyond this line -->
-    <!-- Bootstrap Framework Section Begins Here, DO NOT TOUCH-->
-    <!-- JS files are loaded in the specific order of jquery, popper, then bootstrap -->
+    <!-- The body contains the website, organized according to div classes -->
+    <!-- Div class row, and div class col are the two primary components of bootstrap -->
+    <div class="container">
+      <!-- start with an initial class="container" -->
+      <!-- this class="top-buffer" will not be necessary for your website-->
+      <div class="top-buffer"></div>
+      <!-- you can begin by creating a column or row, cutting your website into grids as necessary -->
+      <div class = "row d-flex justify-content-center">
+        <div class = "row">
+          <!-- Profile Picture and Account Label -->
+          <div class = "col">
+            <!-- once you've cut your website into column/row grids, you can start adding the usual components you've learned in HTML -->
+            <img src="images/blank.png" width="90" width="90">
+          </div>
+          <div class = "col pt-5">
+            <h2>Account</h2>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div class = "row d-flex justify-content-center">
+        <form>
+          <div class="form-group">
+            <!-- The placeholder function will be an important component of your wireframe. It's the gray text that labels the inside of
+          text boxes that disappear when you start typing something -->
+            <input type="text" class="form-control" id="nameInput" placeholder="Name">
+          </div>
+          <!-- This is something I've copied from the guide, but seems to work just fine -->
+          <div class="form-group" data-provide="datepicker">
+            <!-- input type="date" will be useful for the calendar selector on your website,
+            but I lost 2.5 points for missing a label here, a placeholder might work-->
+             <input type="date" name="birthDay">
+          </div>
+          <div class="form-group">
+            <!-- type="text" class="form-control" id="whatever" placeholder="Placeholder text"-->
+            <!-- this will be your recurring theme for every input component in the wireframe -->
+            <input type="text" class="form-control" id="addressInput" placeholder="Address">
+          </div>
+          <div class="form-group">
+            <!-- The same thing here, and the mobileInput is arbitrary that I've made up-->
+            <input type="text" class="form-control" id="mobileInput" placeholder="Mobile Number">
+          </div>
+          <div class="form-group">
+            <!-- You may have noticed I've used a textarea here, instead of input,
+            that allows for a sizeable, larger textbox, but it's not necesary-->
+            <textarea class="form-control" id="descriptionInput" placeholder="User Description"></textarea>
+          </div>
+          <!-- This is your usual button type="submit", and the class="btn btn-primary ml-4" are
+          bootstrap components used for modifying the appearance or position of the button-->
+          <button type="submit" class="btn btn-primary ml-4">Save Changes</button>
+        </form>
+      </div>
+    </div>
+    <!-- Bootstrap Framework Section -->
     <script type="text/javascript" src="js/jquery-3.4.1.slim.min.js"></script>
     <script type="text/javascript" src="js/popper.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
-    <!-- Bootstrap Framework Section Ends Here, DO NOT TOUCH -->
+    <!-- Bootstrap Framework Section End -->
   </body>
 </html>
